@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>더보기 리스트 예시</title>
+<style>
+/* 더보기 버튼 */
+.show-more {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* 숨겨진 리스트 */
+.hidden-list {
+    display: none; /* 처음엔 숨겨놓기 */
+}
+
+/* 더보기 버튼 클릭 시 숨겨진 리스트를 보여주기 */
+.show-more:checked ~ .hidden-list {
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<!-- 더보기 버튼과 숨겨진 리스트 -->
+<input type="checkbox" id="showMore" class="show-more">
+<label for="showMore">더보기</label>
+<ul class="hidden-list">
+    <li>항목 1</li>
+    <li>항목 2</li>
+    <li>항목 3</li>
+</ul>
+
+</body>
+</html>

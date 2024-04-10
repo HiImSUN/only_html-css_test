@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>팝업 창 예시</title>
+<style>
+/* 팝업 창 스타일 */
+.popup {
+    display: none; /* 처음엔 숨겨놓기 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+/* 링크 스타일 */
+.popup-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* 타겟 팝업 활성화 */
+.popup:target {
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<!-- 팝업 링크 -->
+<a href="#popup" class="popup-link">팝업 열기</a>
+
+<!-- 팝업 창 -->
+<div id="popup" class="popup">
+    <h2>팝업 창</h2>
+    <p>이것은 팝업 창입니다.</p>
+    <p><a href="#" class="close-link">닫기</a></p>
+</div>
+
+</body>
+</html>
